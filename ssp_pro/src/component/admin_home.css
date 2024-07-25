@@ -1,0 +1,220 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic layout styles */
+.admin-panel {
+    display: flex;
+    height: 100vh; /* Adjust as needed */
+}
+
+.sidebar {
+  height: 220%;
+    background-color: red;
+    width: 250px; /* Adjust sidebar width as needed */
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.sidebar ul li a.active {
+    background-color: #555;
+    font-weight: bold;
+}
+
+/* Dropdown menu styles */
+.dropdown select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+}
+
+.dropdown select option {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.dropdown select option:hover {
+    background-color: #555;
+}
+
+/* Main content area styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    /* scrollbar-width: none; For Firefox */
+    -ms-overflow-style: none;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Basic table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Optional: Adjust spacing as needed */
+    margin: 1%;
+    border: 1px solid red;
+}
+
+/* Table header styles */
+thead {
+    background-color: #f2f2f2; /* Light gray background */
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table body styles */
+tbody {
+    font-size: 14px;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Gray border bottom for rows */
+}
+
+/* Alternate row background colors */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light alternate row color */
+}
+
+/* No data message */
+tbody tr.no-data td {
+    text-align: center;
+    color: red; /* Optional: Adjust color as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-panel {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        order: 1; /* Keep sidebar above main content */
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        order: 2; /* Move main content below sidebar */
+    }
+}
+
+
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 5%;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
